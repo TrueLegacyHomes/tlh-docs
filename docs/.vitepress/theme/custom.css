@@ -118,28 +118,43 @@
   font-weight: 600;
 }
 
-/* Fix sidebar overlap on wide screens */
+/* Fix sidebar - STAY ON THE LEFT */
 .VPSidebar {
+  position: fixed !important;
+  top: var(--vp-nav-height) !important;
+  left: 0 !important;
   width: 272px !important;
   max-width: 272px !important;
-  flex-shrink: 0;
+  min-width: 272px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  transform: none !important;
 }
 
 @media (min-width: 960px) {
   .VPContent.has-sidebar {
-    padding-left: 272px;
+    margin-left: 272px !important;
+    padding-left: 32px !important;
+  }
+  
+  .VPDoc.has-sidebar {
+    padding-left: 0 !important;
   }
 }
 
+/* On very wide screens, center the content but keep sidebar fixed left */
 @media (min-width: 1440px) {
   .VPSidebar {
-    padding-left: calc((100vw - 1440px) / 2 + 32px);
-    width: calc(272px + (100vw - 1440px) / 2 + 32px) !important;
-    max-width: calc(272px + (100vw - 1440px) / 2 + 32px) !important;
+    left: 0 !important;
+    width: 272px !important;
+    max-width: 272px !important;
+    padding-left: 32px !important;
   }
   
   .VPContent.has-sidebar {
-    padding-left: calc(272px + (100vw - 1440px) / 2 + 32px);
+    margin-left: 272px !important;
+    padding-left: 48px !important;
+    padding-right: 48px !important;
   }
 }
 
