@@ -1,28 +1,22 @@
 /* True Legacy Homes Theme Colors */
-/* Teal: #38b5ad | Dark: #1e293b | Warm: #fef3e2 | Purple: #A47EAF */
+/* Teal: #38b5ad | Dark: #1e293b | Warm: #fef3e2 | Gray text: #1f2937 */
 
 :root {
-  /* Brand Colors - Teal primary */
+  /* Brand Colors - Teal for accents only */
   --vp-c-brand-1: #38b5ad;
   --vp-c-brand-2: #2d9e96;
   --vp-c-brand-3: #4dc4bc;
   --vp-c-brand-soft: rgba(56, 181, 173, 0.14);
 
-  /* Dark color for headers */
-  --vp-c-text-1: #1e293b;
-  --vp-c-text-2: #334155;
+  /* Keep default dark text - don't override */
+  --vp-c-text-1: #1f2937;
+  --vp-c-text-2: #4b5563;
+  --vp-c-text-3: #6b7280;
   
-  /* Tip/accent with purple */
-  --vp-c-tip-1: #A47EAF;
-  --vp-c-tip-2: #b08fba;
-  --vp-c-tip-3: #bca0c5;
-  --vp-c-tip-soft: rgba(164, 126, 175, 0.14);
-
-  /* Warning with teal-dark */
-  --vp-c-warning-1: #2d9e96;
-  --vp-c-warning-2: #38b5ad;
-  --vp-c-warning-3: #4dc4bc;
-  --vp-c-warning-soft: rgba(45, 158, 150, 0.14);
+  /* Backgrounds */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-soft: #f9fafb;
+  --vp-c-bg-mute: #f3f4f6;
 
   /* Home hero gradient */
   --vp-home-hero-name-color: transparent;
@@ -30,11 +24,6 @@
   
   --vp-home-hero-image-background-image: linear-gradient(135deg, #38b5ad 50%, #1e293b 50%);
   --vp-home-hero-image-filter: blur(40px);
-
-  /* Warm background tint */
-  --vp-c-bg: #ffffff;
-  --vp-c-bg-soft: #fef3e2;
-  --vp-c-bg-mute: #f8f4ef;
 }
 
 .dark {
@@ -42,43 +31,37 @@
   --vp-c-brand-2: #38b5ad;
   --vp-c-brand-3: #5ed3cb;
   --vp-c-brand-soft: rgba(56, 181, 173, 0.14);
-  
-  --vp-c-bg: #1e293b;
-  --vp-c-bg-soft: #283548;
-  --vp-c-bg-mute: #334155;
 }
 
 /* Button styling - Teal primary */
 .VPButton.brand {
-  background-color: #38b5ad;
-  border-color: #38b5ad;
+  background-color: #38b5ad !important;
+  border-color: #38b5ad !important;
+  color: #ffffff !important;
 }
 
 .VPButton.brand:hover {
-  background-color: #2d9e96;
-  border-color: #2d9e96;
+  background-color: #2d9e96 !important;
+  border-color: #2d9e96 !important;
 }
 
-/* Alt buttons with dark */
+/* Alt buttons with dark border */
 .VPButton.alt {
-  border-color: #1e293b;
-  color: #1e293b;
+  border-color: #1e293b !important;
+  color: #1e293b !important;
+  background-color: transparent !important;
 }
 
 .VPButton.alt:hover {
-  background-color: rgba(30, 41, 59, 0.1);
+  background-color: rgba(30, 41, 59, 0.05) !important;
 }
 
 /* Sidebar active item - Teal */
 .VPSidebarItem.is-active > .item .link > .text {
-  color: #38b5ad;
+  color: #38b5ad !important;
 }
 
-.dark .VPSidebarItem.is-active > .item .link > .text {
-  color: #4dc4bc;
-}
-
-/* Links - Teal */
+/* Links in content - Teal */
 .vp-doc a {
   color: #38b5ad;
 }
@@ -87,59 +70,51 @@
   color: #2d9e96;
 }
 
-/* Feature cards */
+/* Feature cards - warm background */
 .VPFeature {
-  border: 1px solid rgba(56, 181, 173, 0.2);
-  background: linear-gradient(180deg, #ffffff 0%, #fef3e2 100%);
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
 }
 
 .VPFeature:hover {
   border-color: #38b5ad;
 }
 
-.dark .VPFeature {
-  background: linear-gradient(180deg, #1e293b 0%, #283548 100%);
-}
-
-/* Custom tip boxes with purple accent */
+/* Tip boxes */
 .custom-block.tip {
-  border-color: #A47EAF;
-  background-color: rgba(164, 126, 175, 0.08);
-}
-
-.custom-block.tip .custom-block-title {
-  color: #A47EAF;
-}
-
-/* Info blocks with teal */
-.custom-block.info {
   border-color: #38b5ad;
   background-color: rgba(56, 181, 173, 0.08);
 }
 
-.custom-block.info .custom-block-title {
-  color: #38b5ad;
+.custom-block.tip .custom-block-title {
+  color: #2d9e96;
+}
+
+/* Info blocks */
+.custom-block.info {
+  border-color: #38b5ad;
+  background-color: rgba(56, 181, 173, 0.05);
 }
 
 /* Warning blocks */
 .custom-block.warning {
-  border-color: #2d9e96;
-  background-color: rgba(45, 158, 150, 0.08);
+  border-color: #f59e0b;
 }
 
-/* NavBar styling */
+/* NavBar */
 .VPNavBar {
-  border-bottom: 2px solid rgba(56, 181, 173, 0.2);
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .VPNavBarTitle .title {
-  color: #1e293b;
+  color: #1e293b !important;
   font-weight: 600;
 }
 
-/* Nav links */
-.VPNavBarMenuLink:hover {
-  color: #38b5ad;
+/* Nav links hover */
+.VPNavBarMenuLink:hover,
+.VPNavBarMenuLink.active {
+  color: #38b5ad !important;
 }
 
 /* Content max width */
@@ -154,72 +129,66 @@
   flex-shrink: 0;
 }
 
-.VPDoc {
-  padding-left: 0 !important;
-}
-
-.VPDoc .container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* Ensure content area doesn't get pushed */
 @media (min-width: 960px) {
   .VPContent.has-sidebar {
-    padding-left: 272px !important;
+    padding-left: 272px;
   }
 }
 
 @media (min-width: 1440px) {
   .VPSidebar {
-    padding-left: max(32px, calc((100vw - 1440px) / 2)) !important;
-    width: calc(272px + max(32px, calc((100vw - 1440px) / 2))) !important;
-    max-width: calc(272px + max(32px, calc((100vw - 1440px) / 2))) !important;
+    padding-left: calc((100vw - 1440px) / 2 + 32px);
+    width: calc(272px + (100vw - 1440px) / 2 + 32px) !important;
+    max-width: calc(272px + (100vw - 1440px) / 2 + 32px) !important;
   }
   
   .VPContent.has-sidebar {
-    padding-left: calc(272px + max(32px, calc((100vw - 1440px) / 2))) !important;
+    padding-left: calc(272px + (100vw - 1440px) / 2 + 32px);
   }
 }
 
-/* Hero section warm background */
-.VPHero {
-  background: linear-gradient(180deg, #fef3e2 0%, #ffffff 100%);
+/* Hero section */
+.VPHero .name {
+  color: #1e293b !important;
 }
 
-.dark .VPHero {
-  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+.VPHero .text {
+  color: #4b5563 !important;
+}
+
+.VPHero .tagline {
+  color: #6b7280 !important;
 }
 
 /* Code blocks */
 .vp-doc div[class*='language-'] {
-  border: 1px solid rgba(56, 181, 173, 0.2);
+  border: 1px solid #e5e7eb;
 }
 
 /* Tables */
 .vp-doc table {
-  border: 1px solid rgba(56, 181, 173, 0.2);
+  border: 1px solid #e5e7eb;
 }
 
 .vp-doc tr {
-  border-top: 1px solid rgba(56, 181, 173, 0.1);
+  border-top: 1px solid #e5e7eb;
 }
 
 .vp-doc th {
-  background-color: #fef3e2;
+  background-color: #f9fafb;
   color: #1e293b;
-}
-
-.dark .vp-doc th {
-  background-color: #283548;
-}
-
-/* Badge styling */
-.VPBadge {
-  background-color: #38b5ad;
 }
 
 /* Footer */
 .VPFooter {
-  border-top: 1px solid rgba(56, 181, 173, 0.2);
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Sidebar text stays dark */
+.VPSidebarItem .text {
+  color: #374151;
+}
+
+.VPSidebarItem .link:hover .text {
+  color: #38b5ad;
 }
