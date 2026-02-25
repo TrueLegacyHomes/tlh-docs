@@ -147,6 +147,41 @@
   max-width: 900px;
 }
 
+/* Fix sidebar overlap on wide screens */
+.VPSidebar {
+  width: 272px !important;
+  max-width: 272px !important;
+  flex-shrink: 0;
+}
+
+.VPDoc {
+  padding-left: 0 !important;
+}
+
+.VPDoc .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Ensure content area doesn't get pushed */
+@media (min-width: 960px) {
+  .VPContent.has-sidebar {
+    padding-left: 272px !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .VPSidebar {
+    padding-left: max(32px, calc((100vw - 1440px) / 2)) !important;
+    width: calc(272px + max(32px, calc((100vw - 1440px) / 2))) !important;
+    max-width: calc(272px + max(32px, calc((100vw - 1440px) / 2))) !important;
+  }
+  
+  .VPContent.has-sidebar {
+    padding-left: calc(272px + max(32px, calc((100vw - 1440px) / 2))) !important;
+  }
+}
+
 /* Hero section warm background */
 .VPHero {
   background: linear-gradient(180deg, #fef3e2 0%, #ffffff 100%);
