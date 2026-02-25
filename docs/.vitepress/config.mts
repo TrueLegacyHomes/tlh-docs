@@ -27,6 +27,7 @@ export default defineConfig({
             { text: 'Overview', link: '/getting-started/' },
             { text: 'Prerequisites', link: '/getting-started/prerequisites' },
             { text: 'First Day Setup', link: '/getting-started/first-day-setup' },
+            { text: 'Daily Workflow', link: '/getting-started/daily-workflow' },
             { text: 'Quick Reference', link: '/getting-started/quick-reference' }
           ]
         }
