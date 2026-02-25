@@ -1,39 +1,62 @@
 /* True Legacy Homes Theme Colors */
-/* Teal: #38b5ad | Dark: #1e293b | Warm: #fef3e2 | Gray text: #1f2937 */
+/* Teal: #38b5ad | Dark Navy: #1e293b | Warm Cream: #fef3e2 */
 
 :root {
-  /* Brand Colors - Teal for accents only */
+  /* Teal for primary brand accent */
   --vp-c-brand-1: #38b5ad;
   --vp-c-brand-2: #2d9e96;
   --vp-c-brand-3: #4dc4bc;
-  --vp-c-brand-soft: rgba(56, 181, 173, 0.14);
+  --vp-c-brand-soft: rgba(56, 181, 173, 0.1);
 
-  /* Keep default dark text - don't override */
-  --vp-c-text-1: #1f2937;
-  --vp-c-text-2: #4b5563;
+  /* Dark text */
+  --vp-c-text-1: #1e293b;
+  --vp-c-text-2: #374151;
   --vp-c-text-3: #6b7280;
   
   /* Backgrounds */
   --vp-c-bg: #ffffff;
-  --vp-c-bg-soft: #f9fafb;
-  --vp-c-bg-mute: #f3f4f6;
+  --vp-c-bg-soft: #fef3e2;
+  --vp-c-bg-mute: #f8f4ef;
 
-  /* Home hero gradient */
+  /* Borders */
+  --vp-c-border: #e5e7eb;
+  --vp-c-divider: #e5e7eb;
+
+  /* Hero gradient - warm cream like TLH */
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: linear-gradient(135deg, #1e293b 10%, #38b5ad 100%);
-  
   --vp-home-hero-image-background-image: linear-gradient(135deg, #38b5ad 50%, #1e293b 50%);
-  --vp-home-hero-image-filter: blur(40px);
+  --vp-home-hero-image-filter: blur(44px);
 }
 
 .dark {
   --vp-c-brand-1: #4dc4bc;
   --vp-c-brand-2: #38b5ad;
   --vp-c-brand-3: #5ed3cb;
-  --vp-c-brand-soft: rgba(56, 181, 173, 0.14);
 }
 
-/* Button styling - Teal primary */
+/* ===== HERO SECTION - Warm cream background ===== */
+.VPHero {
+  background: linear-gradient(135deg, #fef3e2 0%, #ffffff 100%) !important;
+}
+
+.VPHero .name {
+  color: #1e293b !important;
+  background: linear-gradient(135deg, #1e293b 10%, #38b5ad 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.VPHero .text {
+  color: #1e293b !important;
+}
+
+.VPHero .tagline {
+  color: #374151 !important;
+}
+
+/* ===== BUTTONS - Teal primary, outline secondary ===== */
 .VPButton.brand {
   background-color: #38b5ad !important;
   border-color: #38b5ad !important;
@@ -45,65 +68,21 @@
   border-color: #2d9e96 !important;
 }
 
-/* Alt buttons with dark border */
 .VPButton.alt {
-  border-color: #1e293b !important;
-  color: #1e293b !important;
-  background-color: transparent !important;
-}
-
-.VPButton.alt:hover {
-  background-color: rgba(30, 41, 59, 0.05) !important;
-}
-
-/* Sidebar active item - Teal */
-.VPSidebarItem.is-active > .item .link > .text {
+  background-color: #ffffff !important;
+  border: 2px solid #38b5ad !important;
   color: #38b5ad !important;
 }
 
-/* Links in content - Teal */
-.vp-doc a {
-  color: #38b5ad;
+.VPButton.alt:hover {
+  background-color: #38b5ad !important;
+  color: #ffffff !important;
 }
 
-.vp-doc a:hover {
-  color: #2d9e96;
-}
-
-/* Feature cards - warm background */
-.VPFeature {
-  border: 1px solid #e5e7eb;
-  background: #ffffff;
-}
-
-.VPFeature:hover {
-  border-color: #38b5ad;
-}
-
-/* Tip boxes */
-.custom-block.tip {
-  border-color: #38b5ad;
-  background-color: rgba(56, 181, 173, 0.08);
-}
-
-.custom-block.tip .custom-block-title {
-  color: #2d9e96;
-}
-
-/* Info blocks */
-.custom-block.info {
-  border-color: #38b5ad;
-  background-color: rgba(56, 181, 173, 0.05);
-}
-
-/* Warning blocks */
-.custom-block.warning {
-  border-color: #f59e0b;
-}
-
-/* NavBar */
+/* ===== NAV BAR - White with dark text ===== */
 .VPNavBar {
-  border-bottom: 1px solid #e5e7eb;
+  background-color: #ffffff !important;
+  border-bottom: 1px solid #e5e7eb !important;
 }
 
 .VPNavBarTitle .title {
@@ -111,15 +90,32 @@
   font-weight: 600;
 }
 
-/* Nav links hover */
+.VPNavBarMenuLink {
+  color: #374151 !important;
+}
+
 .VPNavBarMenuLink:hover,
 .VPNavBarMenuLink.active {
   color: #38b5ad !important;
 }
 
-/* Content max width */
-.VPContent {
-  max-width: 900px;
+/* ===== SIDEBAR ===== */
+.VPSidebar {
+  background-color: #ffffff !important;
+  border-right: 1px solid #e5e7eb !important;
+}
+
+.VPSidebarItem .text {
+  color: #374151 !important;
+}
+
+.VPSidebarItem .link:hover .text {
+  color: #38b5ad !important;
+}
+
+.VPSidebarItem.is-active > .item .link > .text {
+  color: #38b5ad !important;
+  font-weight: 600;
 }
 
 /* Fix sidebar overlap on wide screens */
@@ -147,25 +143,70 @@
   }
 }
 
-/* Hero section */
-.VPHero .name {
+/* ===== CONTENT - Links & text ===== */
+.vp-doc a {
+  color: #38b5ad !important;
+  text-decoration: none;
+}
+
+.vp-doc a:hover {
+  color: #2d9e96 !important;
+  text-decoration: underline;
+}
+
+.vp-doc h1, .vp-doc h2, .vp-doc h3, .vp-doc h4 {
   color: #1e293b !important;
 }
 
-.VPHero .text {
-  color: #4b5563 !important;
+.vp-doc p, .vp-doc li {
+  color: #374151;
 }
 
-.VPHero .tagline {
-  color: #6b7280 !important;
+/* ===== FEATURE CARDS ===== */
+.VPFeature {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 12px;
 }
 
-/* Code blocks */
+.VPFeature:hover {
+  border-color: #38b5ad !important;
+}
+
+.VPFeature .title {
+  color: #1e293b !important;
+}
+
+.VPFeature .details {
+  color: #374151 !important;
+}
+
+/* ===== TIP/INFO BLOCKS ===== */
+.custom-block.tip {
+  border-color: #38b5ad !important;
+  background-color: rgba(56, 181, 173, 0.08) !important;
+}
+
+.custom-block.tip .custom-block-title {
+  color: #38b5ad !important;
+}
+
+.custom-block.info {
+  border-color: #1e293b !important;
+  background-color: rgba(30, 41, 59, 0.05) !important;
+}
+
+.custom-block.info .custom-block-title {
+  color: #1e293b !important;
+}
+
+/* ===== CODE BLOCKS ===== */
 .vp-doc div[class*='language-'] {
   border: 1px solid #e5e7eb;
+  border-radius: 8px;
 }
 
-/* Tables */
+/* ===== TABLES ===== */
 .vp-doc table {
   border: 1px solid #e5e7eb;
 }
@@ -175,20 +216,42 @@
 }
 
 .vp-doc th {
-  background-color: #f9fafb;
-  color: #1e293b;
+  background-color: #fef3e2 !important;
+  color: #1e293b !important;
+  font-weight: 600;
 }
 
-/* Footer */
-.VPFooter {
-  border-top: 1px solid #e5e7eb;
-}
-
-/* Sidebar text stays dark */
-.VPSidebarItem .text {
+.vp-doc td {
   color: #374151;
 }
 
-.VPSidebarItem .link:hover .text {
-  color: #38b5ad;
+/* ===== FOOTER - Dark navy like stats section ===== */
+.VPFooter {
+  background-color: #1e293b !important;
+  border-top: none !important;
+}
+
+.VPFooter .message,
+.VPFooter .copyright {
+  color: #ffffff !important;
+}
+
+/* ===== MISC ===== */
+.VPContent {
+  max-width: 900px;
+}
+
+/* Badge styling */
+.VPBadge {
+  background-color: rgba(56, 181, 173, 0.1) !important;
+  color: #38b5ad !important;
+}
+
+/* Search */
+.VPNavBarSearch .DocSearch-Button {
+  background-color: #f3f4f6 !important;
+}
+
+.DocSearch-Button:hover {
+  border-color: #38b5ad !important;
 }
