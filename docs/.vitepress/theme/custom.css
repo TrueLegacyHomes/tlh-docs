@@ -1,87 +1,190 @@
 /* True Legacy Homes Theme Colors */
-/* Navy: #1e3a5f | Gold: #c9a227 */
+/* Teal: #38b5ad | Dark: #1e293b | Warm: #fef3e2 | Purple: #A47EAF */
 
 :root {
-  /* Brand Colors */
-  --vp-c-brand-1: #1e3a5f;
-  --vp-c-brand-2: #2a4a73;
-  --vp-c-brand-3: #365a87;
-  --vp-c-brand-soft: rgba(30, 58, 95, 0.14);
+  /* Brand Colors - Teal primary */
+  --vp-c-brand-1: #38b5ad;
+  --vp-c-brand-2: #2d9e96;
+  --vp-c-brand-3: #4dc4bc;
+  --vp-c-brand-soft: rgba(56, 181, 173, 0.14);
 
-  /* Accent/Gold for highlights */
-  --vp-c-tip-1: #c9a227;
-  --vp-c-tip-2: #d4b33a;
-  --vp-c-tip-3: #dfbf4d;
-  --vp-c-tip-soft: rgba(201, 162, 39, 0.14);
+  /* Dark color for headers */
+  --vp-c-text-1: #1e293b;
+  --vp-c-text-2: #334155;
+  
+  /* Tip/accent with purple */
+  --vp-c-tip-1: #A47EAF;
+  --vp-c-tip-2: #b08fba;
+  --vp-c-tip-3: #bca0c5;
+  --vp-c-tip-soft: rgba(164, 126, 175, 0.14);
+
+  /* Warning with teal-dark */
+  --vp-c-warning-1: #2d9e96;
+  --vp-c-warning-2: #38b5ad;
+  --vp-c-warning-3: #4dc4bc;
+  --vp-c-warning-soft: rgba(45, 158, 150, 0.14);
 
   /* Home hero gradient */
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: linear-gradient(135deg, #1e3a5f 10%, #c9a227 100%);
+  --vp-home-hero-name-background: linear-gradient(135deg, #1e293b 10%, #38b5ad 100%);
   
-  --vp-home-hero-image-background-image: linear-gradient(135deg, #1e3a5f 50%, #c9a227 50%);
+  --vp-home-hero-image-background-image: linear-gradient(135deg, #38b5ad 50%, #1e293b 50%);
   --vp-home-hero-image-filter: blur(40px);
+
+  /* Warm background tint */
+  --vp-c-bg: #ffffff;
+  --vp-c-bg-soft: #fef3e2;
+  --vp-c-bg-mute: #f8f4ef;
 }
 
 .dark {
-  --vp-c-brand-1: #c9a227;
-  --vp-c-brand-2: #d4b33a;
-  --vp-c-brand-3: #dfbf4d;
-  --vp-c-brand-soft: rgba(201, 162, 39, 0.14);
+  --vp-c-brand-1: #4dc4bc;
+  --vp-c-brand-2: #38b5ad;
+  --vp-c-brand-3: #5ed3cb;
+  --vp-c-brand-soft: rgba(56, 181, 173, 0.14);
+  
+  --vp-c-bg: #1e293b;
+  --vp-c-bg-soft: #283548;
+  --vp-c-bg-mute: #334155;
 }
 
-/* Button styling */
+/* Button styling - Teal primary */
 .VPButton.brand {
-  background-color: #1e3a5f;
-  border-color: #1e3a5f;
+  background-color: #38b5ad;
+  border-color: #38b5ad;
 }
 
 .VPButton.brand:hover {
-  background-color: #2a4a73;
-  border-color: #2a4a73;
+  background-color: #2d9e96;
+  border-color: #2d9e96;
 }
 
-/* Gold accent for alt buttons */
+/* Alt buttons with dark */
 .VPButton.alt {
-  border-color: #c9a227;
-  color: #c9a227;
+  border-color: #1e293b;
+  color: #1e293b;
 }
 
 .VPButton.alt:hover {
-  background-color: rgba(201, 162, 39, 0.1);
+  background-color: rgba(30, 41, 59, 0.1);
 }
 
-/* Sidebar active item */
+/* Sidebar active item - Teal */
 .VPSidebarItem.is-active > .item .link > .text {
-  color: #1e3a5f;
+  color: #38b5ad;
 }
 
 .dark .VPSidebarItem.is-active > .item .link > .text {
-  color: #c9a227;
+  color: #4dc4bc;
+}
+
+/* Links - Teal */
+.vp-doc a {
+  color: #38b5ad;
+}
+
+.vp-doc a:hover {
+  color: #2d9e96;
 }
 
 /* Feature cards */
 .VPFeature {
-  border: 1px solid rgba(30, 58, 95, 0.2);
+  border: 1px solid rgba(56, 181, 173, 0.2);
+  background: linear-gradient(180deg, #ffffff 0%, #fef3e2 100%);
 }
 
 .VPFeature:hover {
-  border-color: #c9a227;
+  border-color: #38b5ad;
 }
 
-/* Custom tip boxes with gold */
+.dark .VPFeature {
+  background: linear-gradient(180deg, #1e293b 0%, #283548 100%);
+}
+
+/* Custom tip boxes with purple accent */
 .custom-block.tip {
-  border-color: #c9a227;
+  border-color: #A47EAF;
+  background-color: rgba(164, 126, 175, 0.08);
 }
 
 .custom-block.tip .custom-block-title {
-  color: #c9a227;
+  color: #A47EAF;
 }
 
-/* Professional look tweaks */
+/* Info blocks with teal */
+.custom-block.info {
+  border-color: #38b5ad;
+  background-color: rgba(56, 181, 173, 0.08);
+}
+
+.custom-block.info .custom-block-title {
+  color: #38b5ad;
+}
+
+/* Warning blocks */
+.custom-block.warning {
+  border-color: #2d9e96;
+  background-color: rgba(45, 158, 150, 0.08);
+}
+
+/* NavBar styling */
 .VPNavBar {
-  border-bottom: 2px solid rgba(30, 58, 95, 0.1);
+  border-bottom: 2px solid rgba(56, 181, 173, 0.2);
 }
 
+.VPNavBarTitle .title {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+/* Nav links */
+.VPNavBarMenuLink:hover {
+  color: #38b5ad;
+}
+
+/* Content max width */
 .VPContent {
   max-width: 900px;
+}
+
+/* Hero section warm background */
+.VPHero {
+  background: linear-gradient(180deg, #fef3e2 0%, #ffffff 100%);
+}
+
+.dark .VPHero {
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+}
+
+/* Code blocks */
+.vp-doc div[class*='language-'] {
+  border: 1px solid rgba(56, 181, 173, 0.2);
+}
+
+/* Tables */
+.vp-doc table {
+  border: 1px solid rgba(56, 181, 173, 0.2);
+}
+
+.vp-doc tr {
+  border-top: 1px solid rgba(56, 181, 173, 0.1);
+}
+
+.vp-doc th {
+  background-color: #fef3e2;
+  color: #1e293b;
+}
+
+.dark .vp-doc th {
+  background-color: #283548;
+}
+
+/* Badge styling */
+.VPBadge {
+  background-color: #38b5ad;
+}
+
+/* Footer */
+.VPFooter {
+  border-top: 1px solid rgba(56, 181, 173, 0.2);
 }
