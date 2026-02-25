@@ -53,7 +53,9 @@ export default defineConfig({
           items: [
             { text: 'Overview', link: '/cowork-plugins/' },
             { text: 'Installation', link: '/cowork-plugins/installation' },
-            { text: 'Plugin Directory', link: '/cowork-plugins/plugin-directory' }
+            { text: 'Plugin Directory', link: '/cowork-plugins/plugin-directory' },
+            { text: 'Editing Skills', link: '/cowork-plugins/editing-skills' },
+            { text: 'Creating New Skills', link: '/cowork-plugins/creating-skills' }
           ]
         }
       ],
