@@ -14,27 +14,39 @@ hero:
       link: /workflow-guides/
 
 features:
-  - icon: 🚀
+  - icon:
+      src: /icons/rocket.svg
+      alt: Rocket
     title: Getting Started
     details: Everything you need to begin working with our AI-powered development workflow.
     link: /getting-started/
-  - icon: 📋
+  - icon:
+      src: /icons/clipboard-list.svg
+      alt: Clipboard
     title: Workflow Guides
     details: Step-by-step instructions for Git, databases, testing, and more.
     link: /workflow-guides/
-  - icon: 🔌
+  - icon:
+      src: /icons/puzzle.svg
+      alt: Puzzle
     title: Cowork Plugins
     details: Extend Claude Code's capabilities with our pre-configured plugins.
     link: /cowork-plugins/
-  - icon: 📦
+  - icon:
+      src: /icons/cube.svg
+      alt: Cube
     title: Starter Template
     details: Clone our production-ready template and deploy in minutes.
     link: /starter-template/
-  - icon: 👥
+  - icon:
+      src: /icons/users.svg
+      alt: Users
     title: Team Onboarding
     details: Role-specific guides for getting new team members up to speed.
     link: /team-onboarding/
-  - icon: ❓
+  - icon:
+      src: /icons/question.svg
+      alt: Question
     title: FAQ
     details: Common questions answered in plain language.
     link: /team-onboarding/faq
