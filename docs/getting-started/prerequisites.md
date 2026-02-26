@@ -6,13 +6,26 @@ Before your first day, make sure you have these accounts and tools ready.
 
 ### 1. GitHub Account
 
-You need a GitHub account to access our code repositories.
+You need a GitHub account to access our code repositories. This is **required before anything else** — we can't invite you to the team until you have one.
 
-**To set up:**
-1. Go to [github.com](https://github.com)
-2. Create an account (or use your existing one)
-3. Send your username to your manager
-4. Wait for an invitation to the TrueLegacyHomes organization
+**To create your account:**
+1. Go to [github.com/signup](https://github.com/signup)
+2. Enter your email address (use one you check regularly — work email is fine)
+3. Create a password (at least 15 characters, or 8+ with a number and lowercase letter)
+4. Choose a username — this can be your name like `transmith` or `john-doe`
+5. Complete the puzzle to verify you're human
+6. Check your email for a verification code and enter it
+7. Skip the personalization questions (click "Skip personalization" at the bottom) — or fill them out if you want
+
+**After signup:**
+1. **Reply with the email address you used to sign up** — we need this to send your org invitation
+2. Wait for an invitation email from TrueLegacyHomes on GitHub
+3. Click "Join TrueLegacyHomes" in the invitation email
+4. You're in!
+
+::: tip Already have GitHub?
+Just send us your GitHub username or the email associated with your account. We'll send the invite.
+:::
 
 [SCREENSHOT: GitHub organization invitation email]
 
